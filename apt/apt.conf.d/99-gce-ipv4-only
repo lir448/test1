@@ -1,0 +1,2 @@
+# Don't try using IPv6 since it causes timeouts
+Acquire::ForceIPv4 "true";

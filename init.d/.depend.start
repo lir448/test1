@@ -1,0 +1,20 @@
+TARGETS = uuidd lvm2-lvmpolld rsyslog open-vm-tools lxcfs unattended-upgrades lxd lvm2-lvmetad tomcat8 killprocs apport haveged nginx mdadm postgresql ssh atd ntp single cron rsync sysstat dbus acpid sshguard plymouth ondemand rc.local grub-common
+INTERACTIVE =
+haveged: rsyslog
+nginx: rsyslog
+mdadm: rsyslog
+postgresql: rsyslog
+ssh: rsyslog
+atd: rsyslog
+ntp: rsyslog
+single: killprocs
+cron: rsyslog
+rsync: rsyslog
+sysstat: rsyslog
+dbus: rsyslog
+acpid: rsyslog
+sshguard: rsyslog ssh
+plymouth: uuidd lvm2-lvmpolld haveged rsyslog open-vm-tools lxcfs nginx unattended-upgrades lxd mdadm postgresql lvm2-lvmetad tomcat8 sshguard ssh atd ntp cron rsync sysstat dbus apport acpid
+ondemand: uuidd lvm2-lvmpolld haveged rsyslog open-vm-tools lxcfs nginx unattended-upgrades lxd mdadm postgresql lvm2-lvmetad tomcat8 sshguard ssh atd ntp cron rsync sysstat dbus apport acpid
+rc.local: uuidd lvm2-lvmpolld haveged rsyslog open-vm-tools lxcfs nginx unattended-upgrades lxd mdadm postgresql lvm2-lvmetad tomcat8 sshguard ssh atd ntp cron rsync sysstat dbus apport acpid
+grub-common: uuidd lvm2-lvmpolld haveged rsyslog open-vm-tools lxcfs nginx unattended-upgrades lxd mdadm postgresql lvm2-lvmetad tomcat8 sshguard ssh atd ntp cron rsync sysstat dbus apport acpid
